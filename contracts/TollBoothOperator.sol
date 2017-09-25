@@ -372,11 +372,9 @@ contract TollBoothOperator is
                 bytes32 vehicleHash = pendingPaymentsStruct[routeHash][0].pendingVehicleHash;
                 TollStruct memory tollStruct = tollStructByHash[vehicleHash];
 
-                //uint vehicleType = Regulator(initialRegulator).getVehicleType(tollStruct.vehicle);
-                uint vehicleType = 3;
+                uint vehicleType = Regulator(initialRegulator).getVehicleType(tollStruct.vehicle);
                 uint multiplier = getMultiplier(vehicleType);
-                uint finalFee = 10 * multiplier;
-                tollStruct.amountToRefund = tollStruct.depositedWeis - finalFee;
+                uint finalFee = getRoutePrice(tollStruct.entryBooth, msg.sender) * multiplier;
 
                 if (finalFee >= tollStruct.depositedWeis){
                     tollStruct.amountToRefund = 0;
@@ -395,14 +393,6 @@ contract TollBoothOperator is
                     tollStructByHash[vehicleHash] = tollStruct;
                     routeStructByHash[routeHash] = routeStruct;
                 }
-
-
-                //for(uint8 i=0; i<= _count; i++)
-                //{
-
-                //}
-
-                // Loop
 
                 return true;
     }
