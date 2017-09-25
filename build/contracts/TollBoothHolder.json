@@ -1,0 +1,228 @@
+{
+  "contract_name": "TollBoothHolder",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_tollBooth",
+          "type": "address"
+        }
+      ],
+      "name": "removeTollBooth",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "setOwner",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "tollStructByHash",
+      "outputs": [
+        {
+          "name": "vehicle",
+          "type": "address"
+        },
+        {
+          "name": "entryBooth",
+          "type": "address"
+        },
+        {
+          "name": "depositedWeis",
+          "type": "uint256"
+        },
+        {
+          "name": "feeTotal",
+          "type": "uint256"
+        },
+        {
+          "name": "amountToRefund",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_tollBooth",
+          "type": "address"
+        }
+      ],
+      "name": "addTollBooth",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_tollBooth",
+          "type": "address"
+        }
+      ],
+      "name": "isTollBooth",
+      "outputs": [
+        {
+          "name": "indeed",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isPausedValue",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "contractOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "tollBoothExists",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "tollBooth",
+          "type": "address"
+        }
+      ],
+      "name": "LogTollBoothAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "tollBooth",
+          "type": "address"
+        }
+      ],
+      "name": "LogTollBoothRemoved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "LogOwnerSet",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b5b60008054600160a060020a03191633600160a060020a0390811691821760a060020a60ff021981169093559091167fa1d2149652d81eb35c360c115fc7ac594124cb1ea8a5a33e9a7f5768c62869fb60405160405180910390a35b5b6105bf8061007b6000396000f3006060604052361561007d5763ffffffff60e060020a6000350416630bbbcbb2811461008257806313af4035146100b55780631a64e81b146100e85780632c333eab1461013857806350bb553a1461016b5780637eb8f0931461019e578063893d20e8146101c5578063ce606ee0146101f4578063e6f7e70414610223575b600080fd5b341561008d57600080fd5b6100a1600160a060020a0360043516610256565b604051901515815260200160405180910390f35b34156100c057600080fd5b6100a1600160a060020a036004351661030b565b604051901515815260200160405180910390f35b34156100f357600080fd5b6100fe60043561040d565b604051600160a060020a0395861681529390941660208401526040808401929092526060830152608082019290925260a001905180910390f35b341561014357600080fd5b6100a1600160a060020a0360043516610449565b604051901515815260200160405180910390f35b341561017657600080fd5b6100a1600160a060020a0360043516610505565b604051901515815260200160405180910390f35b34156101a957600080fd5b6100a161054f565b604051901515815260200160405180910390f35b34156101d057600080fd5b6101d861055f565b604051600160a060020a03909116815260200160405180910390f35b34156101ff57600080fd5b6101d861056f565b604051600160a060020a03909116815260200160405180910390f35b341561022e57600080fd5b6100a1600160a060020a036004351661057e565b604051901515815260200160405180910390f35b6000805433600160a060020a0390811691161461027257600080fd5b600160a060020a038216151561028757600080fd5b600160a060020a03821660009081526002602052604090205460ff1615156102ae57600080fd5b600160a060020a0380831660008181526002602052604090819020805460ff1916905590913316907f5b34220b1e6888774f5c1badf295633d5d8d4ae02d5e3019e422b3debfe89678905160405180910390a35060015b5b919050565b6000805433600160a060020a0390811691161461032757600080fd5b33600160a060020a031682600160a060020a0316141561034657600080fd5b600160a060020a038216151561035b57600080fd5b60005460a060020a900460ff161515610385576000805460a060020a60ff02191660a060020a1790555b600054600160a060020a0380841691167fa1d2149652d81eb35c360c115fc7ac594124cb1ea8a5a33e9a7f5768c62869fb60405160405180910390a360008054600160a060020a031916600160a060020a038416179081905560a060020a900460ff16151560011415610403576000805460a060020a60ff02191690555b5060015b5b919050565b600160208190526000918252604090912080549181015460028201546003830154600490930154600160a060020a039485169490921692909185565b6000805433600160a060020a0390811691161461046557600080fd5b600160a060020a038216151561047a57600080fd5b600160a060020a03821660009081526002602052604090205460ff161515600114156104a557600080fd5b600160a060020a0380831660008181526002602052604090819020805460ff1916600117905590913316907fe8f587f6ae5ef5f7560b94b9369dd242c9de0588c328add1a785044abf837c6d905160405180910390a35060015b5b919050565b6000600160a060020a038216151561051c57600080fd5b600160a060020a03821660009081526002602052604090205460ff16151561040357506000610305565b5060015b919050565b60005460a060020a900460ff1681565b600054600160a060020a03165b90565b600054600160a060020a031681565b60026020526000908152604090205460ff16815600a165627a7a723058205fac82a2e10de4e6bdf5694206bbb0b8cff997f6a6214d77334fddca8e6961310029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1506349678343
+}

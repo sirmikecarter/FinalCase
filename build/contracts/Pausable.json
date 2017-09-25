@@ -1,0 +1,141 @@
+{
+  "contract_name": "Pausable",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "setOwner",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newState",
+          "type": "bool"
+        }
+      ],
+      "name": "setPaused",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isPausedValue",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isPaused",
+      "outputs": [
+        {
+          "name": "isIndeed",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "contractOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_initialPauseState",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "newPausedState",
+          "type": "bool"
+        }
+      ],
+      "name": "LogPausedSet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "LogOwnerSet",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b604051602080610413833981016040528080519150505b6000805460ff19168215151761010060a860020a03191661010033600160a060020a039081168281029390931793849055919204167fa1d2149652d81eb35c360c115fc7ac594124cb1ea8a5a33e9a7f5768c62869fb60405160405180910390a35b505b61037a806100996000396000f3006060604052361561005c5763ffffffff60e060020a60003504166313af4035811461006157806316c38b3c146100945780637eb8f093146100c0578063893d20e8146100e7578063b187bd2614610116578063ce606ee01461013d575b600080fd5b341561006c57600080fd5b610080600160a060020a036004351661016c565b604051901515815260200160405180910390f35b341561009f57600080fd5b6100806004351515610260565b604051901515815260200160405180910390f35b34156100cb57600080fd5b6100806102c4565b604051901515815260200160405180910390f35b34156100f257600080fd5b6100fa6102cd565b604051600160a060020a03909116815260200160405180910390f35b341561012157600080fd5b6100806102e2565b604051901515815260200160405180910390f35b341561014857600080fd5b6100fa61031a565b604051600160a060020a03909116815260200160405180910390f35b6000805433600160a060020a03908116610100909204161461018d57600080fd5b33600160a060020a031682600160a060020a031614156101ac57600080fd5b600160a060020a03821615156101c157600080fd5b60005460ff1615156101db576000805460ff191660011790555b600054600160a060020a03808416916101009004167fa1d2149652d81eb35c360c115fc7ac594124cb1ea8a5a33e9a7f5768c62869fb60405160405180910390a36000805461010060a860020a031916610100600160a060020a03851602179081905560ff16151560011415610256576000805460ff191690555b5060015b5b919050565b6000805433600160a060020a03908116610100909204161461028157600080fd5b6000805460ff1916831515179081905560ff16151533600160a060020a031660008051602061032f83398151915260405160405180910390a35060015b5b919050565b60005460ff1681565b6000546101009004600160a060020a03165b90565b6000805460ff161515600160a060020a03331660008051602061032f83398151915260405160405180910390a35060005460ff165b90565b6000546101009004600160a060020a0316815600ae0f86d9801b0bd39a2ce25d9fd1f202f2fd22e80150be4a99adb0275a635d6ca165627a7a72305820c0cfd9f93c6ad4647139ac1537b2f10533b77235ac3f2533a8708fef21500f7b0029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1506349678343
+}

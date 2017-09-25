@@ -1,0 +1,159 @@
+{
+  "contract_name": "DepositHolder",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "setOwner",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isPausedValue",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "depositStructs",
+      "outputs": [
+        {
+          "name": "depositWeis",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getDeposit",
+      "outputs": [
+        {
+          "name": "weis",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "contractOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_depositWeis",
+          "type": "uint256"
+        }
+      ],
+      "name": "setDeposit",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_initialDeposit",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "depositWeis",
+          "type": "uint256"
+        }
+      ],
+      "name": "LogDepositSet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "LogOwnerSet",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b604051602080610485833981016040528080519150505b80151561003257600080fd5b600160a060020a033316600081815260016020526040908190208390557ffa53ebd539f52eb4ef352ffacb2f8f5f8080cd8bb7ebb2f1acab3e1ce4bd65cb9083905190815260200160405180910390a260008054600160a060020a03191633600160a060020a0390811691821760a060020a60ff021981169093559091167fa1d2149652d81eb35c360c115fc7ac594124cb1ea8a5a33e9a7f5768c62869fb60405160405180910390a35b505b610397806100ee6000396000f300606060405236156100675763ffffffff60e060020a60003504166313af4035811461006c5780637eb8f0931461009f578063893d20e8146100c657806391927631146100f5578063c399ec8814610126578063ce606ee01461014b578063f5bade661461017a575b600080fd5b341561007757600080fd5b61008b600160a060020a03600435166101a4565b604051901515815260200160405180910390f35b34156100aa57600080fd5b61008b6102a6565b604051901515815260200160405180910390f35b34156100d157600080fd5b6100d96102b6565b604051600160a060020a03909116815260200160405180910390f35b341561010057600080fd5b610114600160a060020a03600435166102c6565b60405190815260200160405180910390f35b341561013157600080fd5b6101146102d8565b60405190815260200160405180910390f35b341561015657600080fd5b6100d96102f5565b604051600160a060020a03909116815260200160405180910390f35b341561018557600080fd5b61008b600435610304565b604051901515815260200160405180910390f35b6000805433600160a060020a039081169116146101c057600080fd5b33600160a060020a031682600160a060020a031614156101df57600080fd5b600160a060020a03821615156101f457600080fd5b60005460a060020a900460ff16151561021e576000805460a060020a60ff02191660a060020a1790555b600054600160a060020a0380841691167fa1d2149652d81eb35c360c115fc7ac594124cb1ea8a5a33e9a7f5768c62869fb60405160405180910390a360008054600160a060020a031916600160a060020a038416179081905560a060020a900460ff1615156001141561029c576000805460a060020a60ff02191690555b5060015b5b919050565b60005460a060020a900460ff1681565b600054600160a060020a03165b90565b60016020526000908152604090205481565b600160a060020a0333166000908152600160205260409020545b90565b600054600160a060020a031681565b600081151561031257600080fd5b600160a060020a033316600081815260016020526040908190208490557ffa53ebd539f52eb4ef352ffacb2f8f5f8080cd8bb7ebb2f1acab3e1ce4bd65cb9084905190815260200160405180910390a25060015b9190505600a165627a7a723058202178749f8d4f29cae1ab8f8258a8c5a7fd08e81874bd07ae41ab5621fd93c6fb0029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1506349678342
+}

@@ -1,0 +1,93 @@
+{
+  "contract_name": "Regulated",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isPausedValue",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_newRegulator",
+          "type": "address"
+        }
+      ],
+      "name": "setRegulator",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getRegulator",
+      "outputs": [
+        {
+          "name": "regulator",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "initialRegulator",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_initialRegulator",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "previousRegulator",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "newRegulator",
+          "type": "address"
+        }
+      ],
+      "name": "LogRegulatorSet",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b6040516020806102c2833981016040528080519150505b600160a060020a038116151561003b57600080fd5b60008054600160a860020a03191633600160a060020a03161790555b505b61025a806100686000396000f300606060405263ffffffff60e060020a6000350416637eb8f0938114610045578063cde0a4f81461006c578063f7e317f41461009f578063fc407044146100ce575b600080fd5b341561005057600080fd5b6100586100fd565b604051901515815260200160405180910390f35b341561007757600080fd5b610058600160a060020a036004351661010d565b604051901515815260200160405180910390f35b34156100aa57600080fd5b6100b261020f565b604051600160a060020a03909116815260200160405180910390f35b34156100d957600080fd5b6100b261021f565b604051600160a060020a03909116815260200160405180910390f35b60005460a060020a900460ff1681565b6000805433600160a060020a0390811691161461012957600080fd5b33600160a060020a031682600160a060020a0316141561014857600080fd5b600160a060020a038216151561015d57600080fd5b60005460a060020a900460ff161515610187576000805460a060020a60ff02191660a060020a1790555b600054600160a060020a0380841691167fa32c4b1f26f0d877f643f7fb9db131f9cebf04d120fe5ada74c0bdfc808dab8360405160405180910390a360008054600160a060020a031916600160a060020a038416179081905560a060020a900460ff16151560011415610205576000805460a060020a60ff02191690555b5060015b5b919050565b600054600160a060020a03165b90565b600054600160a060020a0316815600a165627a7a7230582093a9ab90c4fb60c35ab8c454298177da814759cd762cc130686a92bd83bf4b7c0029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1506349678343
+}
